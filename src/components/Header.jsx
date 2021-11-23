@@ -17,8 +17,10 @@ const Header = () => {
         </ul>
       </nav>
       <div className="header__search">
-        <input type="text"/>
-        <img src={iconSearch} alt="iconSearch" />
+        <input type="text" placeholder="Busca tu pelicula favorita" />
+        <figure>
+          <img src={iconSearch} alt="iconSearch" />
+        </figure>
       </div>
     </header>
   )

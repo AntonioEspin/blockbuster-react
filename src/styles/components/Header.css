@@ -1,5 +1,3 @@
-@import url("../vars.css");
-
 .header {
   display: flex;
   width: 100%;
@@ -25,4 +23,45 @@
 
 .header__nav ul li a {
   color: var(--white);
+  text-decoration: none;
+}
+
+.header__nav ul li a:hover {
+  color: var(--primary-yellow);
+  text-decoration: underline;
+}
+
+.header__search {
+  position: relative;
+  width: 45.83%;
+  height: 45px;
+  border-radius: 8px;
+}
+
+.header__search input {
+  width: 100%;
+  height: inherit;
+  border: none;
+  border-radius: 8px;
+  padding: 0 20px;
+}
+
+.header__search input::placeholder {
+  color: var(--grey);
+  font-size: 1.6rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+.header__search figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 75px;
+  height: 45px;
+  right: 0;
+  top: 0;
+  background-color: var(--primary-yellow);
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
 }
