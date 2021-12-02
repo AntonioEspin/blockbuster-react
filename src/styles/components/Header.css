@@ -8,6 +8,7 @@
 
 .header__figure img {
   width: 80px;
+  cursor: pointer;
 }
 
 .header__nav {
@@ -29,6 +30,7 @@
 .header__nav ul li a:hover {
   color: var(--primary-yellow);
   text-decoration: underline;
+  font-weight: 700;
 }
 
 .header__search {

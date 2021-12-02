@@ -2,14 +2,18 @@ import React from "react";
 import Layout from "./Layout";
 import Carrousel from "./Carrousel";
 import MoviesContainer from "./MoviesContainer";
+import {ContainerContext} from '../context/AppContext'
 import '../styles/global.css'
 
 const App = () => {
+  
   return (
-    <Layout>
-      <Carrousel/>
-      <MoviesContainer/>
-    </Layout>
+    <ContainerContext>
+      <Layout>
+        <Carrousel/>
+        <MoviesContainer/>
+      </Layout>
+    </ContainerContext>
   )
 }
 

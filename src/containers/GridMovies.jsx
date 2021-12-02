@@ -1,30 +1,24 @@
-import React, { useEffect, useState } from "react";
+import React, {useContext, useEffect, useRef} from "react";
 import MovieItem from "../components/MovieItem";
 import '../styles/containers/GridMovies.css'
 
+import {AppContext} from "../context/AppContext";
+
 const GridMovies = () => {
 
-  const API = 'https://api.themoviedb.org/3/movie/popular?api_key=51463645e696823d295c4c7e1cf5fd7e&language=es-MX&page=1'
-
-  const [movies, setMovies] = useState([])
-
-  useEffect(async () => {
-    const response = await fetch(API)
-    const data = await response.json()
-    setMovies(data.results)
-  }, [])
+  const {state} = useContext(AppContext)
+  const listMovies = state.listMovies
 
   return (
     <section className="gridMovies">
-      {movies.map(movie => (
-        <MovieItem 
-          // key={movie.id}
-          // poster={movie.poster_path}
-          // vote={movie.vote_average}
-          key={movie.id}
-          movie = {movie}
-        />
-      ))}
+      {
+        listMovies.map(movie => (
+          <MovieItem 
+            key={movie.id}
+            movie = {movie}
+          />
+        ))   
+      }
     </section>
   )
 }

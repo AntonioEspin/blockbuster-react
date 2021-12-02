@@ -1,5 +1,7 @@
 .carrousel {
+  display: -webkit-inline-box;
   width: 100%;
   height: 350px;
   background-color: aqua;
+  overflow: hidden;
 }
