@@ -28,7 +28,6 @@ const Header = () => {
     setSearch(event.target.value)
     getFilterMovies(search)
   }
-  console.log(search)
   return (
     <header className="header">
       <figure className="header__figure">
