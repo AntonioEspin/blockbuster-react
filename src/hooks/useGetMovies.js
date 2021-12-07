@@ -2,7 +2,7 @@ import {useState, useEffect} from "react";
 
 const useGetPopularMovies = (page) => {
 
-  const API = `https://api.themoviedb.org/3/movie/popular?api_key=51463645e696823d295c4c7e1cf5fd7e&language=es-MX&page=${page}`
+  const API = `https://api.themoviedb.org/3/movie/popular?api_key=${process.env.APIKEY}&language=es-MX&page=${page}`
 
   const [movies, setMovies] = useState([])
 
@@ -18,7 +18,7 @@ const useGetPopularMovies = (page) => {
 }
 
 const useGetUpcomingMovies = () => {
-  const API = 'https://api.themoviedb.org/3/movie/upcoming?api_key=51463645e696823d295c4c7e1cf5fd7e&language=es-MX&page=1'
+  const API = `https://api.themoviedb.org/3/movie/upcoming?api_key=${process.env.APIKEY}&language=es-MX&page=1`
 
   const [movies, setMovies] = useState([])
 
